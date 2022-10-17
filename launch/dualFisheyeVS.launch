@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="leftCameraInfoTopic" value="/insta360/left/camera_info" />
+  <arg name="rightCameraInfoTopic" value="/insta360/right/camera_info" />
+  <arg name="leftCameraTopic" value="/insta360/left/image_raw" />
+  <arg name="rightCameraTopic" value="/insta360/right/image_raw" />
+  <arg name="gain" value="0.8"/>
+  <arg name="saveData" value="1"/>
+  <arg name="saveExternalViews" value="1"/>
+  <arg name="externalCameraTopic" value="/camera/image_raw" />
+
+
+  <!-- Right and left cameras optical frame w.r.t. the arm flange
+  <node pkg="tf" type="static_transform_publisher" name="leftcamera2link6" args="0.158043091  0.004391066807  0.06439958172 -0.4799787781  0.4987374847  0.5092590001  0.5114064576 link6 camera_left_optical_frame  10" />
+  <node pkg="tf" type="static_transform_publisher" name="rightcamera2link6" args="0.1620937389  -0.0148384205  0.0658654156 0.5114154888  -0.5110465205  0.4793611152  0.4974922843 link6 camera_right_optical_frame  10" />-->
+
+  <!-- Joystick to teleoperate the arm (set desired and initial pose)
+  <node pkg="joy" type="joy_node" name="joy_node" />
+  <node pkg="dsr_example_py" type="joy_xbox360.py" name="joy_xbox360" args="model:=a0509" />-->
+
+  <!-- External cameras bringup-->
+  <include file="$(find dualFisheyeVS)/launch/externalCamera.launch" if="$(eval arg('saveExternalViews') == 1)">
+    <!--<arg name="hoge" value="fuga" />-->
+  </include>
+
+  <!-- Insta360 dual fisheye cameras bringup-->
+  <node pkg="insta360" type="insta360" name="insta360" output="screen" respawn="false"/>
+
+
+  <!-- Dual fisheye cameras Photometric Visual Servoing -->
+  <node pkg="dualFisheyeVS" type="dualFisheyeVS" name="dualFisheyeVS" output="screen" respawn="false">
+    <param name="leftCameraInfoTopic" value="$(arg leftCameraInfoTopic)" />
+    <param name="rightCameraInfoTopic" value="$(arg rightCameraInfoTopic)" />
+    <param name="leftCameraTopic" value="$(arg leftCameraTopic)" />
+    <param name="rightCameraTopic" value="$(arg rightCameraTopic)" />
+    <param name="gain" value="$(arg gain)"/>
+    <param name="saveData" value="$(arg saveData)"/>
+    <param name="saveExternalViews" value="$(arg saveExternalViews)"/>
+    <param name="externalCameraTopic" value="$(arg externalCameraTopic)"/>
+  </node>
+</launch>
