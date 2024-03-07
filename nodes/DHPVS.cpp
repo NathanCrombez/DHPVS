@@ -48,7 +48,7 @@ typedef struct {
 } cameraParameters;
 cameraParameters rightCameraParameters, leftCameraParameters;
 
-////IMAGES, GAUSSIAN MIXTURES
+////IMAGES
 vpImage<unsigned char> rightI, leftI, rightId, leftId, rightIdiff, leftIdiff;
 
 ////DISPLAYS
