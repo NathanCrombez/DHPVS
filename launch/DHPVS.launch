@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- ROBOT'S FLANGE TO RIGHT CAMERA TRANSFORM -->
+  <node pkg="tf" type="static_transform_publisher" name="flange2rightcamera" args="0.000 0.000 0.020 0.000 0.000 1.000 0.000 /right_camera /flange 100"/>
+  <!-- ROBOT'S FLANGE TO RIGHT CAMERA TRANSFORM -->
+  <node pkg="tf" type="static_transform_publisher" name="flange2leftcamera" args="0.000 0.000 -0.020 1.000 0.000 0.000 0.000 /left_camera /flange 100"/>
+
+  <!-- DUAL-HEMISPHERICAL PHOTOMETRIC VISUAL SERVOING-->
+  <arg name="verbose" value="1"/>
+  <arg name="gain" value="0.9"/>
+  <arg name="Z" value="1.0"/>
+
+  <node pkg="DHPVS" type="DHPVS" name="DHPVS_node" output="screen" respawn="false">
+    <remap from="/dhpvs/right_camera/camera_info" to="/camera_front/camera_info"/>
+    <remap from="/dhpvs/left_camera/camera_info"  to="/camera_back/camera_info"/>
+    <remap from="/dhpvs/right_camera/image_raw"   to="/camera_front/image_raw"/>
+    <remap from="/dhpvs/left_camera/image_raw"    to="/camera_back/image_raw"/>
+    <remap from="/dhpvs/robot/get_pose"           to="/camera_link_controller/pose"/>
+    <remap from="/dhpvs/robot/set_velocity"       to="/unity/set_velocity"/>
+
+    <param name="gain" value="$(arg gain)"/>
+    <param name="verbose" value="$(arg verbose)"/>
+    <param name="Z" value="$(arg Z)"/>
+  </node>
+
+</launch>
