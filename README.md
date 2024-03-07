@@ -23,7 +23,7 @@ catkin_make
 
 ### Usage
 Your Dual-Hemispherical camera needs to be fully calibrated.
-Intrinsic parameters and extrinsic (pose wrt your robot's flange) have to be known for both hemispherical cameras.
+Intrinsic and extrinsic parameters have to be known for both hemispherical cameras.
 * Remap the expected topics in the launch file for: 
   * Your right-camera's images topic
   * Your left-camera's images topic
@@ -40,7 +40,7 @@ A unifying geometric representation for central projection systems,
 Computer Vision and Image Understanding, Volume 103, Issue 3`). 
 Parameter ξ is expected to be the fifth element of the array D in the sensor_msgs/CameraInfo messages.
 
-Then,
+Then, simply:
 ```bash
 roslaunch DHPVS DHPVS.launch
 ```
