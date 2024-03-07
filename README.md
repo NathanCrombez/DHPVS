@@ -3,8 +3,8 @@
 
 **DHPVS** is a ...
 
-![teaser1](img/teaser1.gif)
-![teaser2](img/teaser2.gif)
+https://www.youtube.com/watch?v=hoYNN9570LE
+
 
 For further details, please see our paper:
 ```
