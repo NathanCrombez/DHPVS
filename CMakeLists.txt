@@ -11,10 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 find_package(VISP 3 REQUIRED)
-find_package(PER REQUIRED per_core per_io)
-if(PER_FOUND)
-    include(${PER_USE_FILE})
-endif(PER_FOUND)
 
 catkin_package(
 )
