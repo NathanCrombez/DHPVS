@@ -12,8 +12,6 @@ robustness to various perturbations.
 
 [![Alt text](https://img.youtube.com/vi/hoYNN9570LE/0.jpg)](https://www.youtube.com/watch?v=hoYNN9570LE)
 
-
-```
 ### Build
 ```bash
 sudo apt install ros-noetic-visp ros-noetic-visp-bridge
