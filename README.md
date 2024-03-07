@@ -21,7 +21,7 @@ cd ..
 catkin_make
 ```
 
-### Usage
+### Instructions
 Your Dual-Hemispherical camera needs to be fully calibrated.
 Intrinsic and extrinsic parameters have to be known for both hemispherical cameras.
 * Remap the expected topics in the launch file for: 
@@ -31,7 +31,7 @@ Intrinsic and extrinsic parameters have to be known for both hemispherical camer
   * Your left-camera's info topic ¹
   * Your robot arm topic to set flange velocities
   * Your robot arm topic to get flange pose
-* Edit the two static_transform_publishers:
+* Edit the two static_transform_publishers in the launch file:
   * flange2rightcamera: robot's flange to right-camera transformation
   * flange2leftcamera: robot's flange to left-camera transformation 
 
