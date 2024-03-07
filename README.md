@@ -3,8 +3,7 @@
 
 **DHPVS** is a ...
 
-https://www.youtube.com/watch?v=hoYNN9570LE
-
+[![Alt text](https://img.youtube.com/vi/hoYNN9570LE/0.jpg)](https://www.youtube.com/watch?v=hoYNN9570LE)
 
 For further details, please see our paper:
 ```
