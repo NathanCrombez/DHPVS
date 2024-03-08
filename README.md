@@ -1,5 +1,9 @@
 # DHPVS: Dual-Hemispherical Photometric Visual Servoing
+[Nathan Crombez](http://nathancrombez.free.fr/), [Jocelyn Buisson](https://www.ciad-lab.fr/jocelyn_buisson/), [Antoine N. André](https://antoineandre.github.io/), [Guillaume Caron](https://home.mis.u-picardie.fr/~g-caron), IEEE Robotics and Autonomous Letters (RA-L), 2024
 
+[[Paper]](http://nathancrombez.free.fr/) [[Video]](https://www.youtube.com/watch?v=hoYNN9570LE)
+
+### 1. Description
 **DHPVS** is an extension of photometric visual servoing to 360-degree optical rigs
 composed of two wide-angle lenses oriented in opposite directions.
 The photometric visual feature coupled to dual-hemispherical
@@ -8,11 +12,11 @@ useful complementary information, showing large convergence domains,
 straighter camera trajectories, high accuracy and a high degree of 
 robustness to various perturbations.
 
-### Video
+<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DHAcquisition.jpg' height='320'>
+<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DoosanInsta360.jpg' height='320'>
+<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DHPVS.gif' height='320'>
 
-[![Alt text](https://img.youtube.com/vi/hoYNN9570LE/0.jpg)](https://www.youtube.com/watch?v=hoYNN9570LE)
-
-### Build
+### 3. Build
 ```bash
 sudo apt install ros-noetic-visp ros-noetic-visp-bridge
 cd ~/catkin_ws/src/
@@ -21,7 +25,7 @@ cd ..
 catkin_make
 ```
 
-### Instructions
+### 4. Instructions
 Your Dual-Hemispherical camera needs to be fully calibrated.
 Intrinsic and extrinsic parameters have to be known for both hemispherical cameras.
 * Remap the expected topics in the launch file for: 
@@ -45,9 +49,9 @@ Then, simply:
 roslaunch DHPVS DHPVS.launch
 ```
 
-### Paper
+### 5. Citation
 
-For further details, please see our paper:
+For further details, please see our paper. If you find our work usefull, please cite:
 ```
 @article{DHPVS,
   author       = "Nathan Crombez, Jocelyn Buisson, Antoine N. André, Guillaume Caron", 
@@ -55,3 +59,7 @@ For further details, please see our paper:
   journal      = "IEEE Robotics and Autonomous Letters (RA-L)",
   year         = "2024"
 }
+```
+
+### 6. Acknowledgement
+This work was supported by AIST, ITH department international collaboration project [DVS-straight](https://unit.aist.go.jp/jrl-22022/en/projects/project-dvsstraight.html) (R3-I-02, 2021-2025).
