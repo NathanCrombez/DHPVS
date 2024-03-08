@@ -42,14 +42,15 @@ A unifying geometric representation for central projection systems,
 Computer Vision and Image Understanding, Volume 103, Issue 3`). 
 Parameter ξ is expected to be the fifth element of the array D in the sensor_msgs/CameraInfo messages.
 
-Then, simply:
+### 5. Usage
+When all is set, simply launch: 
 ```bash
 roslaunch DHPVS DHPVS.launch
 ```
 
-### 5. Citation
+### 6. Citation
 
-For further details, please see our paper. If you find our work usefull, please cite:
+For further details, please see our paper and if you find our work usefull, please cite:
 ```
 @article{DHPVS,
   author       = "Nathan Crombez, Jocelyn Buisson, Antoine N. André, Guillaume Caron", 
