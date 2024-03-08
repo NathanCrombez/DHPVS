@@ -12,9 +12,7 @@ useful complementary information, showing large convergence domains,
 straighter camera trajectories, high accuracy and a high degree of 
 robustness to various perturbations.
 
-<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DHAcquisition.jpg' height='320'>
-<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DoosanInsta360.jpg' height='320'>
-<img src='https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DHPVS.gif' height='320'>
+![alt text](https://raw.githubusercontent.com/NathanCrombez/DHPVS/main/img/DHPVS.gif)
 
 ### 3. Build
 ```bash
