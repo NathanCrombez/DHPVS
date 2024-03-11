@@ -53,10 +53,14 @@ roslaunch DHPVS DHPVS.launch
 For further details, please see our paper and if you find our work usefull, please cite:
 ```
 @article{DHPVS,
-  author       = "Nathan Crombez, Jocelyn Buisson, Antoine N. André, Guillaume Caron", 
-  title        = "DHPVS: Dual-Hemispherical Photometric Visual Servoing",
-  journal      = "IEEE Robotics and Autonomous Letters (RA-L)",
-  year         = "2024"
+  author={Crombez, Nathan and Buisson, Jocelyn and André, Antoine N. and Caron, Guillaume},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Dual-Hemispherical Photometric Visual Servoing}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/LRA.2024.3375114}
 }
 ```
 
