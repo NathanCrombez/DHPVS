@@ -64,5 +64,5 @@ For further details, please see our paper and if you find our work usefull, plea
 }
 ```
 
-### 6. Acknowledgement
+### 7. Acknowledgement
 This work was supported by AIST, ITH department international collaboration project [DVS-straight](https://unit.aist.go.jp/jrl-22022/en/projects/project-dvsstraight.html) (R3-I-02, 2021-2025).
